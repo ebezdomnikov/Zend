@@ -1,0 +1,28 @@
+{
+    "require": {
+        "zf-commons/zfc-user": "1.*",
+        "doctrine/orm": "^2.5.5",
+        "zf-commons/zfc-admin": "^0.3.0",
+        "zendframework/zendframework": "^2.1",
+        "zendframework/zend-mvc": "^2.1",
+        "goalio/goalio-rememberme": "1.*",
+        "goalio/goalio-rememberme-doctrine-orm": "^1.0",
+        "doctrine/common": "^2.7",
+        "zf-commons/zfc-user-doctrine-orm": "^1.0",
+        "larapack/dd": "^1.1",
+        "socalnick/scn-social-auth": "^1.21"
+    },
+    "scripts": {
+      "cs-check": "phpcs",
+      "cs-fix": "phpcbf",
+      "development-disable": "zf-development-mode disable",
+      "development-enable": "zf-development-mode enable",
+      "development-status": "zf-development-mode status",
+      "post-create-project-cmd": ["@development-enable"],
+      "serve": "php -S 0.0.0.0:8080 -t public public/index.php",
+      "test": "phpunit"
+    },
+    "require-dev": {
+        "zendframework/zend-developer-tools": "^1.1"
+    }
+}

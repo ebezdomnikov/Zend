@@ -1,0 +1,18 @@
+<div style="float:left; padding-right:16px;">
+    <?php echo $this->gravatar($this->zfcUserIdentity()->getEmail()) ?>
+</div>
+<h3><?php echo $this->translate('Hello'); ?>, <?php echo $this->zfcUserDisplayName() ?>!</h3>
+<div style="clear:both;"></div>
+<p>
+        <?php
+        $form = $this->indexForm;
+        $form->prepare();
+        $form->setAttribute('action', $this->url('zfcuser'));
+        $form->setAttribute('method', 'post');
+        $form->setAttribute('autocomplete', 'off');
+        ?>
+        <?php echo $this->partial('_form.phtml', ['form' => $form]); ?>
+
+</p>
+<a href="<?php echo $this->url('zfcuser/logout') ?>">[<?php echo $this->translate('Sign Out'); ?>]</a>
+

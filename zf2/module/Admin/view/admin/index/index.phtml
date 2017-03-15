@@ -1,0 +1,9 @@
+<div class="row content">
+    <p>Активация email</p>
+    <?php if($this->success): ?>
+    <br />
+        <p>Ваш email успешно активирован, теперь можете <a href="<?php echo $this->loginLink; ?>"> авторизоваться.</a></p>
+    <?php else: ?>
+    <p><?php echo $this->message; ?></p>
+    <?php endif; ?>
+</div>
